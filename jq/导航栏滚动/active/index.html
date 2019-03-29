@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'> -->
+</head>
+<body>
+  <nav class="nav">
+    <ul>
+      <li><a href="#section1">销售</a></li>
+      <li><a href="#section2">采购</a></li>
+      <li><a href="#section3">计划</a></li>
+    </ul>
+  </nav>
+  <section id="section1">
+    <h1>one</h1>
+   	<div class="content1">
+   	我是第一个
+   	</div>
+  </section>
+ 
+  <section id="section2">
+    <h1>two</h1>
+    <p>
+    	我是第二个
+    </p>
+  </section>
+  <section id="section3">
+    <h1>three</h1>
+ 		我是第三个
+  </section>
+
+  <script src="jquery-1.11.0.min.js"></script>
+  <script src="jquery.navScroll.js"></script>
+  <script>
+    $('.nav').navScroll({
+      mobileDropdown: true,
+      mobileBreakpoint: 768,
+      scrollSpy: true
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="css/animate.css">
+WOW.js 依赖 animate.css，所以它支持 animate.css 多达 60 多种的动画效果，能满足您的各种需求。
+
+<div class="wow slideInLeft"></div>
+<div class="wow slideInRight"></div>
+可以加入 data-wow-duration（动画持续时间）和 data-wow-delay（动画延迟时间）属性，如：
+
+<div class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s"></div>
+<div class="wow slideInRight" data-wow-offset="10"  data-wow-iteration="10"></div>
+具体参照www.wow.js。
+
+
+
+<script src="js/wow.js"></script>
+<script>
+    wow = new WOW(
+            {
+                animateClass: 'animated',
+                offset:       100
+            }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+        var section = document.createElement('section');
+        section.className = 'section--purple wow fadeInDown';
+        this.parentNode.insertBefore(section, this);
+    };
+</script>

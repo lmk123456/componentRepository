@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>css中，img图片居中问题</title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{margin: 0; padding: 0; border: none;}
+		.box{
+			width: 800px;
+			margin: 50px auto;
+		}
+		.boxSpan{
+			display: inline-block;
+			padding: 0 10px;
+			background: #fff;
+			border: 1px solid #999;
+			line-height: 30px;
+		}
+		.boxSpanImg{
+			width: 20px;
+			height: auto;
+			vertical-align: middle;
+		}
+		.boxSpanLabel{
+			vertical-align: top;
+			display: inline-block;
+		}
+		.boxSpanBg{
+			display:inline-block;
+			width: 20px;
+			height: 30px;
+			background: url('img/close@2x.png') no-repeat center center;
+			background-size: 100%;
+			vertical-align: top;
+		}
+		.flexBox{
+			display: -webkit-inline-flex
+			display:inline-flex;
+			padding: 0 10px;
+			background: #fff;
+			border: 1px solid #999;
+			line-height: 30px;
+			align-items:center
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div>
+			用line-height，vertical-align: middle;排版
+		</div>
+		<span class="boxSpan">
+			<label class="boxSpanLabel">关闭按钮</label>
+			<img class="boxSpanImg" src="img/close@2x.png" alt="">
+		</span>
+	</div>
+
+	<div class="box">
+		<div>
+			用背景形式塞图片;排版
+		</div>
+		<span class="boxSpan">
+			<label>关闭按钮</label>
+			<span class="boxSpanBg"></span>
+		</span>
+	</div>
+	<div class="box">
+		<div>
+			Flex 布局;排版
+		</div>
+		<span class="flexBox">
+			<label>关闭按钮</label>
+			<img class="boxSpanImg" src="img/close@2x.png" alt="">
+		</span>
+	</div>
+</body>
+</html>
